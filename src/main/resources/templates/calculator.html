@@ -22,13 +22,13 @@
 				<button>Enter</button>
 			</div>
 		</form>
-		
+		{{#hasOneOrMoreNumbers}}
 		<div>
 			<form method="post" action="/abs">
 				<button>abs</button>
 			</form>
 		</div>
-		
+		{{/hasOneOrMoreNumbers}}
 		{{#hasTwoOrMoreNumbers}}
 		<div>
 			<form method="post" action="/add">
@@ -61,11 +61,20 @@
 		
 		{{#hasUndoer}}
 		<div>
-		<form action="/undo" method="post">
-		<button>undo</button>
-		</form>
+				<form action="/undo" method="post">
+					<button>undo</button>
+				</form>
 		</div>
 		{{/hasUndoer}}
+		
+		{{#hasUndoer}}
+		<div>
+			<form action="/redo" method="post">
+				<button>Redo</button>
+			</form>
+		</div>
+		{{/hasUndoer}}
+		
 	</div>
 
 	<div class="stack-holder">
